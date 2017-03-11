@@ -5,6 +5,6 @@
 + Development: $(npm bin)/webpack
 + Production: $(npm bin)/webpack -p
 
-## Test
+## Run
 
 + Development: $(npm bin)/webpack-dev-server
