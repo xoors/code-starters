@@ -1,0 +1,45 @@
+{
+  "name": "react-with-webpack",
+  "version": "0.0.1",
+  "description": "React with Webpack code starter",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf ./dist/*",
+    "prebuild": "npm run clean",
+    "copy": "cp -rf package.json dist",
+    "postbuild": "npm run copy",
+    "build": "npm run build:babel",
+    "build:babel": "babel ./src --ignore *.test.js --out-dir ./dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "homepage": "",
+  "dependencies": {
+    "react": "^15.3.1",
+    "react-addons-transition-group": "^15.3.1",
+    "react-dom": "^15.3.1",
+    "react-router": "^3.0.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-polyfill": "^6.13.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react": "^6.11.0",
+    "babel-preset-stage-1": "^6.13.0",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-1",
+      "react"
+    ]
+  }
+}
